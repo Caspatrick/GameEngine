@@ -7,7 +7,7 @@ GameObject::GameObject(std::string texture_file, sf::Vector2f _size, sf::Vector2
 	texture.loadFromFile(texture_file);
 	shape.setTexture(&texture);
 	shape.setPosition(_pos);
-	shape.setOrigin(0.5f * size  );
+	shape.setOrigin(0.5f * size);
 }
 
 void GameObject::move(float x, float y) {
