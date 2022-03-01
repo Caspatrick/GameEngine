@@ -11,6 +11,7 @@ private:
 	int nImgsY;
 	int curX = 0;      //index of current image
 	int curY = 0; 
+	bool flipH = false;
 
 public:
 	Animation();
@@ -18,6 +19,7 @@ public:
 	void bindTexture(sf::RectangleShape* shape);
 	void setCurrentImage(int nx, int ny, sf::RectangleShape* shape);
 	void nextImage(sf::RectangleShape* shape);
+	void flipHorizontally(bool _flipH = true);
 };
 
 

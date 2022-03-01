@@ -35,6 +35,11 @@ void GameObject::playAnimation(std::string name, int textureLine) {
 	anim.setCurrentImage(0, textureLine, &shape);
 }
 
+void GameObject::flipHorizontally(bool flipH) {
+	Animation& anim = animations.at(curAnimation);
+	anim.flipHorizontally(flipH);
+}
+
 void GameObject::update()
 {
 	Animation& anim = animations.at(curAnimation);

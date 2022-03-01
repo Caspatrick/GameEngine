@@ -22,10 +22,15 @@ void Animation::bindTexture(sf::RectangleShape* shape)
 	shape->setTexture(&tex);
 }
 
+/*start animation at current image.
+	nx, ny: index of current image;
+	shape: pointer to the shape it gets drawn on
+*/
 void Animation::setCurrentImage(int nx, int ny, sf::RectangleShape* shape) {
 	curX = nx;
 	curY = ny;
-	sf::IntRect ir(size.x * nx, size.y * ny, size.x, size.y);
+	int flipint = flipH ? 1 : 0;
+	sf::IntRect ir(size.x * (nx+flipint), size.y * ny, (flipH ? -1 : 1) * size.x, size.y);
 	shape->setTextureRect(ir);
 }
 
@@ -33,4 +38,8 @@ void Animation::setCurrentImage(int nx, int ny, sf::RectangleShape* shape) {
 void Animation::nextImage(sf::RectangleShape* shape) {
 	int nx = (curX == nImgsX-1) ? 0 : curX + 1;
 	setCurrentImage(nx, curY, shape);
+}
+
+void Animation::flipHorizontally(bool _flipH) {
+	flipH = _flipH;
 }

@@ -38,13 +38,16 @@ int main() {
 
 			//Keyboard input handling
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) {
+				player.flipHorizontally(true);
 				player.move(-1, 0);
 			}
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) {
 				player.move(0, 1);
 			}
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) {
+				player.flipHorizontally(false);
 				player.move(1, 0);
+
 			}
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) {
 				player.move(0, -1);

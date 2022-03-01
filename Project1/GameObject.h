@@ -29,6 +29,7 @@ public:
 
 	void addAnimation(std::string name, std::string filename, int nImgsX, int nImgsY);
 	void playAnimation(std::string name, int textureLine = 0);
+	void flipHorizontally(bool flipH = true);
 	void update();
 	//getter function 
 	sf::Vector2f getPos();
