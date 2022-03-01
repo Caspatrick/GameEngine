@@ -11,11 +11,14 @@ class Renderer
 {
 	sf::RenderWindow *window;
 	std::vector<GameObject*> renderObjects;
+	float framerate;
+	sf::Clock clock;
+	float deltaT = 0.0f;
 
 public:
 	//constructor
-	Renderer(int sizeX, int sizeY, std::string title);
-	Renderer(sf::RenderWindow* _window);
+	//Renderer(int sizeX, int sizeY, std::string title);
+	Renderer(sf::RenderWindow* _window, float _framerate);
 
 	//add GameObject to be rendererd on the window
 	void add(GameObject* obj);

@@ -24,7 +24,7 @@
     <ClCompile Include="Renderer.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="TextureHandler.cpp">
+    <ClCompile Include="Animation.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClInclude Include="Renderer.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="TextureHandler.h">
+    <ClInclude Include="Animation.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
